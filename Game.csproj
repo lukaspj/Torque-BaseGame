@@ -54,8 +54,11 @@
     <Compile Include="Sys\Config.cs" />
     <Compile Include="Sys\Cursor.cs" />
     <Compile Include="Sys\DisplayCursorCanvas.cs" />
+    <Compile Include="Sys\Lighting.cs" />
     <Compile Include="Sys\Main.cs" />
+    <Compile Include="Sys\PostFx.cs" />
     <Compile Include="Sys\Profiles.cs" />
+    <Compile Include="Sys\RenderManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -126,7 +126,7 @@ namespace Game.Sys
             // FXAA piggybacks on the FSAA setting in $pref::Video::mode.
             if (Global.isObject("FXAA_PostEffect"))
             {
-                PostEffect FXAA_PostEffect = Sim.FindObjectByName<PostEffect>("FXAA_PostEffect");
+                Torque3D.PostEffect FXAA_PostEffect = Sim.FindObjectByName<Torque3D.PostEffect>("FXAA_PostEffect");
                 FXAA_PostEffect.IsEnabled = (fsaa > 0);
             }
         }

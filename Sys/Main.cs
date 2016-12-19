@@ -32,6 +32,12 @@ namespace Game.Sys
 
             Canvas.Init();
             Cursor.Init();
+
+            // PostFX defaults and utilities.
+            PostFx.Init();
+
+            RenderManager.Init();
+            Lighting.Init();
         }
     }
 }
