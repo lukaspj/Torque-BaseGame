@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\</OutputPath>
+    <OutputPath>..\..\..\..\game\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -44,21 +44,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\LocalGameConnection.cs" />
-    <Compile Include="Game\Main.cs" />
-    <Compile Include="Game\PlayGui.cs" />
+    <Compile Include="Core\Audio.cs" />
+    <Compile Include="Core\Canvas.cs" />
+    <Compile Include="Core\Console\Console.cs" />
+    <Compile Include="Core\Console\ConsoleDlg.cs" />
+    <Compile Include="Core\Console\ConsoleEntry.cs" />
+    <Compile Include="Core\Console\Main.cs" />
+    <Compile Include="Core\Console\Profiles.cs" />
+    <Compile Include="Core\Cursor.cs" />
+    <Compile Include="Core\DisplayCursorCanvas.cs" />
+    <Compile Include="Core\GfxData\Clouds.cs" />
+    <Compile Include="Core\GfxData\CommonMaterialData.cs" />
+    <Compile Include="Core\GfxData\ScatterSky.cs" />
+    <Compile Include="Core\GfxData\Shaders.cs" />
+    <Compile Include="Core\GfxData\TerrainBlock.cs" />
+    <Compile Include="Core\GfxData\Water.cs" />
+    <Compile Include="Core\HelperFunctions.cs" />
+    <Compile Include="Core\GlobalValues.cs" />
+    <Compile Include="Core\Lighting.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\AdvancedLighting.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\AL_GlowVisualize.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\AL_DepthVisualize.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\AL_LightColorVisualize.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\AL_LightSpecularVisualize.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\AL_NormalsVisualize.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\DeferredShading.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\LightViz.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\Shaders.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\ShadowViz.cs" />
+    <Compile Include="Core\LightingSystem\Advanced\ShadowVizGui.cs" />
+    <Compile Include="Core\LightingSystem\Basic\BasicLighting.cs" />
+    <Compile Include="Core\LightingSystem\Basic\ShadowFilter.cs" />
+    <Compile Include="Core\LightingSystem\Shadowmaps\ShadowMaps.cs" />
+    <Compile Include="Core\Main.cs" />
+    <Compile Include="Core\ParseArgs.cs" />
+    <Compile Include="Core\PostEffect.cs" />
+    <Compile Include="Core\Profiles.cs" />
+    <Compile Include="Core\RenderManager.cs" />
+    <Compile Include="Core\Sfx\AudioDescriptions.cs" />
+    <Compile Include="Core\Sfx\AudioData.cs" />
+    <Compile Include="Core\Sfx\AudioStateExclusive.cs" />
+    <Compile Include="Core\Sfx\AudioStates.cs" />
+    <Compile Include="Core\Sfx\AudioEnvironments.cs" />
+    <Compile Include="Core\Sfx\AudioAmbience.cs" />
+    <Compile Include="Core\Sfx\SFXState.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="Modules\ClientServer\ClientServer.cs" />
+    <Compile Include="Modules\ClientServer\Client\Client.cs" />
+    <Compile Include="Modules\ClientServer\Client\GameConnectionToServer.cs" />
+    <Compile Include="Modules\ClientServer\Client\LevelDownload.cs" />
+    <Compile Include="Modules\ClientServer\Client\LevelLoad.cs" />
+    <Compile Include="Modules\ClientServer\Client\Message.cs" />
+    <Compile Include="Modules\ClientServer\Server\Audio.cs" />
+    <Compile Include="Modules\ClientServer\Server\Commands.cs" />
+    <Compile Include="Modules\ClientServer\Server\GameConnectionToClient.cs" />
+    <Compile Include="Modules\ClientServer\Server\LevelDownload.cs" />
+    <Compile Include="Modules\ClientServer\Server\LevelInfo.cs" />
+    <Compile Include="Modules\ClientServer\Server\LevelLoad.cs" />
+    <Compile Include="Modules\ClientServer\Server\Message.cs" />
+    <Compile Include="Modules\ClientServer\Server\Server.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sys\Canvas.cs" />
-    <Compile Include="Sys\Config.cs" />
-    <Compile Include="Sys\Cursor.cs" />
-    <Compile Include="Sys\DisplayCursorCanvas.cs" />
-    <Compile Include="Sys\Lighting.cs" />
-    <Compile Include="Sys\Main.cs" />
-    <Compile Include="Sys\PostFx.cs" />
-    <Compile Include="Sys\Profiles.cs" />
-    <Compile Include="Sys\RenderManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -69,6 +115,7 @@
       <Name>Torque3D</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
